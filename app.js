@@ -9,8 +9,7 @@ let container = document.createElement('div');
 //container içine bir row oluşturduk.
 let row=document.createElement('div');
         row.className='row';
-        document.querySelector(".container").appendChild(row)
-        //container.appendChild(row);
+        document.querySelector(".container").appendChild(row);
 
 //yaptığımız row u 5-2-5'li columa ayırdık. İlk sol columu oluşturduk. Rengini kırmızı yaptık.
 let colSol=document.createElement('div');
@@ -64,13 +63,14 @@ let colOrta=document.createElement('div');
 
 //orta colum içine "InfoTechAcademy" yazdık.
 let paraReklam=document.createElement('div')
+        paraReklam.className='p'
         paraReklam.textContent='InfoTechAcademy';
         colOrta.appendChild(paraReklam);
 
 //yaptığımız row u 5-2-5'li columa ayırdık. İlk sağ columu oluşturduk.
 let colSag=document.createElement('div');
         colSag.className='col-md-5';
-        colSag.style.backgroundColor='yellow';
+        colSag.style.backgroundColor='white';
         colSag.style.border='solid';
         row.appendChild(colSag);
 
@@ -84,17 +84,42 @@ let ulListe = document.createElement('ul');
 let liListe1=document.createElement('li');
         liListe1.className='list-group-item';
         liListe1.innerHTML="A Grubu İsim Listesi";
+        liListe1.style.backgroundColor='yellow';
         ulListe.appendChild(liListe1);
 
 //ul içine ikinci listeyi oluşturduk.
 let liListe2=document.createElement('li');
         liListe2.className='list-group-item';
-        liListe2.innerHTML="B Grubu İsim Listesi";
-        liListe2.innerText='Deneme';
+        liListe2.innerText="B Grubu İsim Listesi";
+        liListe2.style.backgroundColor='yellow';
         ulListe.appendChild(liListe2);
 
 //ul içine üçüncü listeyi oluşturduk.
 let liListe3=document.createElement('li');
         liListe3.className='list-group-item';
         liListe3.innerHTML="C Grubu İsim Listesi";
+        liListe3.style.backgroundColor='yellow';
         ulListe.appendChild(liListe3);
+
+//container içinde birinci ve ikinci row arasına br ekledik.
+let breakMe=document.createElement('br');
+        breakMe.className='br';
+        container.appendChild(breakMe);
+
+//container içine ikinci row oluşturduk.
+let row2=document.createElement('div');
+        row2.className='row';
+        document.querySelector(".container").appendChild(row2);
+
+//ikinci rowun içine bir colum tanımladık.
+let colAlt=document.createElement('div');
+        colAlt.className='col-md-12';
+        colAlt.style.border='solid';
+        row2.appendChild(colAlt);
+        colAlt.style.height='50px';
+
+let paraKayanYazı=document.createElement('div');
+        paraKayanYazı.className='h3';
+        paraKayanYazı.innerHTML = 'Hack Your Future - Grecee - 2021 @by BFat';
+        paraKayanYazı.style.textAlign='center';
+        colAlt.appendChild(paraKayanYazı);
