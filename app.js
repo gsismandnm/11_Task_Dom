@@ -1,32 +1,57 @@
-//getElementsByClassName ile sağ tarafta yer alan listelerimiz üzerinde oynamalar yaptık.
+//Yeni bir container oluşturduk.
+let container = document.createElement('div');
+        container.className='container';
+        //oluşturduğumuz container'ı body'e bağladık.
+        document.body.appendChild(container);
 
+//container içine bir row yaptık.
+let row=document.createElement('div');
+        row.className='row';
+        container.appendChild(row);
 
+//yaptığımız row u 5-2-5'li columa ayırdık. İlk sol columu oluşturduk.
+let colSol=document.createElement('div');
+        colSol.className='col-md-5';
+        row.appendChild(colSol);
 
-// //GETELEMENTSBYCLASSNAME İLE ELEMENTİMİZİ SEÇTİK.
-//document.getElementsByClassName
- //let items = document.getElementsByClassName('list-group-item');
+//divFrmGrp adında bir form oluşturduk ve onu columa ekledik.
+let divFrmGrp =document.createElement('div');
+        divFrmGrp.setAttribute("id", "divFrmGrp");
+        divFrmGrp.className='form-group';
+        colSol.appendChild(divFrmGrp);
 
-//         //LİSTE GRUBU İÇİNDEKİ 2'NCİ SIRADAKİ ELEMENTİN İÇERİĞİNİ KENDİ İSTEDİĞİMİZ YAZI İLE DEĞİŞTİRDİK.
-//       items[1].textContent =  `app.js dosyası ile bu elementin içeriğini değiştirdik.;`
+//Email girmek için bir div oluşturup içine label ve input alanı oluşturduk.
+let labelEmail =document.createElement('label');
+        labelEmail.setAttribute("id", "labelEmail");
+        labelEmail.htmlFor="inputEmail";
+        labelEmail.innerHTML="Email";
+        divFrmGrp.appendChild(labelEmail);
 
-//         //LİSTE GRUBU İÇİNDEKİ 4'NCÜ SIRADAKİ ELEMENTİN ARKA RENGİNİ MAVİ YAPTIK.
-//       items[3].style.backgroundColor = 'blue';
-        
+let inputEmail=document.createElement('input');
+        inputEmail.type="text";
+        inputEmail.className="form-control";
+        divFrmGrp.appendChild(inputEmail);
 
-//         //LİSTE GRUBU İÇİNDEKİ 5'NCİ SIRADAKİ ELEMENTİN YAZI RENGİNİ KIRMIZI YAPTIK.
- //        items[4].style.color='red'
+//yaptığımız row u 5-2-5'li columa ayırdık. İlk orta columu oluşturduk.
+let colOrta=document.createElement('div');
+        colOrta.className='col-md-2';
+        row.appendChild(colOrta);
 
+//yaptığımız row u 5-2-5'li columa ayırdık. İlk sağ columu oluşturduk.
+let colSag=document.createElement('div');
+        colSag.className='col-md-5';
+        row.appendChild(colSag);
 
+//sağ tarafta oluşturduğumuz columun içine ul ekledik.
+let ulListe = document.createElement('ul');
+        ulListe.className='list-group';
+        colSag.appendChild(ulListe);
 
-let formClass= document.querySelector("col-md-6");
-
-
-let formClass = document.createElement('form');
-        formClass.id ='divForm';
-        formClass.className ='formGroup';
-        
-formClass.style.border='2px';
-formClass.style.backgroundColor='red';
+//ul içine listeleri oluşturduk.
+let li=document.createElement('li');
+        li.className='list-group-item';
+        li.innerHTML="Birinci Sıra Liste";
+        li.appendChild(ulListe);
 
 
 
