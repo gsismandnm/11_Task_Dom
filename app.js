@@ -62,8 +62,7 @@ let colOrta=document.createElement('div');
         row.appendChild(colOrta);
 
 //orta colum içine "InfoTechAcademy" yazdık.
-let paraReklam=document.createElement('div')
-        paraReklam.className='p'
+let paraReklam=document.createElement('div');
         paraReklam.textContent='InfoTechAcademy';
         colOrta.appendChild(paraReklam);
 
@@ -109,17 +108,34 @@ let breakMe=document.createElement('br');
 //container içine ikinci row oluşturduk.
 let row2=document.createElement('div');
         row2.className='row';
-        document.querySelector(".container").appendChild(row2);
+        row2.style.height='40px';
+        container.appendChild(row2);
 
-//ikinci rowun içine bir colum tanımladık.
-let colAlt=document.createElement('div');
-        colAlt.className='col-md-12';
-        colAlt.style.border='solid';
-        row2.appendChild(colAlt);
-        colAlt.style.height='50px';
+//oluşturduğumuz row içine bir buton ekledik. 
+let buttonMe=document.createElement('button');
+        buttonMe.type='button';
+        buttonMe.className='btn btn-warning';        
+        buttonMe.textContent='!!! DİKKAT... Tıklandığında Her Şey Değişebilir !!!';
+        buttonMe.click('');
+        row2.appendChild(buttonMe);
 
+
+//container içinde ikinci ve üçüncü row arasına br ekledik.
+let breakMe2=document.createElement('br');
+        breakMe2.className='br';
+        container.appendChild(breakMe2);
+
+//container içine üçüncü row oluşturduk.
+let row3=document.createElement('div');
+        row3.className='row';
+        row3.style.height='40px';
+        row3.style.border='solid';
+        document.querySelector(".container").appendChild(row3);
+
+//tanımlanan row içine bir h1 tag oluşturduk.
 let paraKayanYazı=document.createElement('div');
-        paraKayanYazı.className='h3';
-        paraKayanYazı.innerHTML = 'Hack Your Future - Grecee - 2021 @by BFat';
+        paraKayanYazı.className='h1';
+        paraKayanYazı.style.fontSize='24px';
+        paraKayanYazı.textContent='InfoTechAcademy - Grecee - 2021 @by BFat';
         paraKayanYazı.style.textAlign='center';
-        colAlt.appendChild(paraKayanYazı);
+        row3.appendChild(paraKayanYazı);
